@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "584134869130",
+    "project_id": "hantey-8e495",
+    "storage_bucket": "hantey-8e495.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584134869130:android:decb599dbc190f40ebad73",
+        "android_client_info": {
+          "package_name": "com.example.adminhantey"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3D1PoHQgEtFe6YOfyeiaEBvz7AViMTXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
