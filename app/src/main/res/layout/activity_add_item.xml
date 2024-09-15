@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".AddItemActivity">
+    tools:context=".AddItemActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
 
     <ScrollView
         android:layout_width="0dp"
@@ -15,17 +16,21 @@
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
 
             <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:id="@+id/backButton"
+                android:layout_width="42dp"
+                android:layout_height="36dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:background="@android:color/transparent"
@@ -38,13 +43,14 @@
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="96dp"
                 android:fontFamily="@font/poppins"
                 android:text="Add Item"
                 android:textColor="@color/black"
                 android:textSize="40sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageButton"
-                app:layout_constraintTop_toTopOf="@+id/imageButton" />
+                app:layout_constraintStart_toEndOf="@+id/backButton"
+                app:layout_constraintTop_toTopOf="@+id/backButton" />
 
             <EditText
                 android:id="@+id/enterfoodname"
@@ -62,6 +68,7 @@
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
@@ -69,9 +76,9 @@
                 android:id="@+id/enterfoodprice"
                 android:layout_width="0dp"
                 android:layout_height="57dp"
+                android:layout_marginTop="24dp"
                 android:background="@drawable/edittextshape"
                 android:elevation="5dp"
-                android:layout_marginTop="24dp"
                 android:fontFamily="@font/poppins"
                 android:hint="Enter Food Price"
                 android:inputType="text"
@@ -79,7 +86,7 @@
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/enterfoodname"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/enterfoodname"
                 app:layout_constraintTop_toBottomOf="@+id/enterfoodname" />
 
@@ -96,19 +103,67 @@
                 android:text="Select Image"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/enterfoodprice"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/enterfoodprice"
                 app:layout_constraintTop_toBottomOf="@+id/enterfoodprice" />
 
             <ImageView
                 android:id="@+id/selectedimage"
-                android:layout_width="175dp"
-                android:layout_height="110dp"
+                android:layout_width="170dp"
+                android:layout_height="134dp"
                 android:layout_marginTop="24dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/gallery"
                 app:layout_constraintEnd_toEndOf="@+id/selectimage"
+                app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="@+id/selectimage"
                 app:layout_constraintTop_toBottomOf="@+id/selectimage" />
+
+
+            <TextView
+                android:id="@+id/shortdescription"
+                android:layout_width="396dp"
+                android:layout_height="66dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="156dp"
+                android:background="@drawable/edittextshape"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text=" Short Description"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/selectimage" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="260dp"
+                android:layout_height="79dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:fontFamily="@font/poppins"
+                android:text="whatever is here, you have to mention your food here."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/shortdescription"
+                app:layout_constraintTop_toBottomOf="@+id/shortdescription" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/additem"
+                android:layout_width="157dp"
+                android:layout_height="57dp"
+                android:background="@drawable/greenbuttonshape"
+                android:fontFamily="@font/poppins"
+                android:text="Add Item"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/editText2"
+                app:layout_constraintStart_toStartOf="@+id/editText2"
+                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
